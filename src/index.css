@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input{
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+  text-indent: 25px;
+}
+
+
+header input{
+  background: linear-gradient(0deg, #E3E3E3, #E3E3E3), linear-gradient(0deg, #EEEEEE, #EEEEEE);
+  border: 1px solid #E3E3E3;
+  border-radius: 8px;
+  text-indent: 45px;
+}
+
+.nav-item{
+  @apply cursor-pointer transition-all  px-5 hover:text-red-dark animation-hover relative py-4;
+}
+
+.animation-hover:after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  height: 2px;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  @apply w-0 bg-red-dark left-1/2 bottom-0 absolute;
+}
+.animation-active:after {
+  @apply left-0 w-full;
+}
+.animation-hover:hover:after {
+  @apply left-0 w-full;
+}
+
+
+/* Slideshow */
+.slick-dots li {
+  @apply inline-block;
+}
+.slick-dots span {
+  @apply bg-slider-grey;
+}
+.slick-dots .slick-active span {
+  @apply bg-blue-dark rounded-l-full rounded-r-full w-[4rem];
+}
+
+
+.category-container, .newsletter-container{
+  background: linear-gradient(180deg, rgba(218, 218, 218, 0.25) 0%, #DADADA 100%);
+}
+
+.social-icon{
+  background: linear-gradient(0deg, #E8E8E8, #E8E8E8),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+}
